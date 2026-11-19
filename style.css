@@ -1,0 +1,59 @@
+/* External stylesheet for the Digital Character webpage */
+:root {
+    --primary: #2547a6;
+    --primary-dark: #19357f;
+    --accent: #f8c85a;
+    --ink: #1e293b;
+    --muted: #526178;
+    --background: #f3f6fc;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--white);
+}
+.container { width: min(1100px, 90%); margin: 0 auto; }
+.narrow { max-width: 760px; }
+.site-header { background: var(--white); box-shadow: 0 2px 12px rgba(25, 53, 127, .08); }
+.header-content { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0; }
+.logo { color: var(--primary-dark); font-size: 1.2rem; font-weight: 800; text-decoration: none; }
+.logo span { color: var(--primary); }
+nav { display: flex; gap: 22px; }
+nav a { color: var(--ink); text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { color: var(--primary); }
+.hero { padding: 100px 0; color: var(--white); background: linear-gradient(120deg, var(--primary-dark), #4568cf); }
+.hero .container { max-width: 1100px; }
+.eyebrow { font-size: .8rem; font-weight: bold; letter-spacing: .18em; color: var(--accent); }
+h1 { font-size: clamp(2.3rem, 6vw, 4.1rem); line-height: 1.14; max-width: 730px; margin: 12px 0 22px; }
+h1 span { color: var(--accent); }
+.hero p:not(.eyebrow) { max-width: 620px; font-size: 1.1rem; }
+.button { display: inline-block; margin-top: 16px; padding: 12px 26px; border-radius: 8px; background: var(--accent); color: #1c2c4d; text-decoration: none; font-weight: bold; }
+.button:hover, .button:focus { background: #ffdb86; }
+.section { padding: 70px 0; }
+.section h2, .closing h2 { margin: 0 0 18px; font-size: clamp(1.65rem, 3vw, 2.2rem); color: var(--primary-dark); }
+.section p { color: var(--muted); }
+.light-section { background: var(--background); }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
+.card { background: var(--white); border-radius: 14px; padding: 28px; box-shadow: 0 6px 22px rgba(29, 53, 105, .06); }
+.symbol { font-size: 2rem; }
+.card h3 { color: var(--primary-dark); margin: 10px 0 8px; }
+.card p { margin: 0; }
+.tips-list { padding-left: 23px; color: var(--muted); }
+.tips-list li { margin-bottom: 12px; padding-left: 5px; }
+.tips-list li::marker { color: var(--primary); }
+.closing { background: #eaf0ff; text-align: center; padding: 54px 0; }
+.closing p { margin-bottom: 0; }
+footer { background: #15264f; color: #e1e8fb; text-align: center; padding: 20px 0; font-size: .9rem; }
+@media (max-width: 700px) {
+    .header-content { flex-direction: column; }
+    nav { gap: 17px; }
+    .hero { padding: 75px 0; }
+    .card-grid { grid-template-columns: 1fr; }
+    .section { padding: 55px 0; }
+}
